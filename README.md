@@ -51,7 +51,7 @@ This project is a text classification model for categorizing e-commerce product 
 To run the Streamlit app locally:
 
 ```bash
-streamlit run model.py
+streamlit run stream_app.py
 ```
 
 This will start the app, and you can access it in your browser at http://localhost:8501.
@@ -62,9 +62,23 @@ This will start the app, and you can access it in your browser at http://localho
 2. Click the "Classify" button.
 3. The app will display the predicted category for the entered text.
 
+
 ## Model Details
 
-The text classification model is based on [provide model details, e.g., Random Forest, SVM, etc.]. The training data used for the model is sourced from [mention the data source].
+The text classification model is trained using various algorithms, including Support Vector Classifier (SVC), k-Nearest Neighbors (KNN), Random Forest, and Multinomial Naive Bayes. Among these algorithms, the Support Vector Classifier performed well in terms of accuracy and generalization.
+
+### Training Data
+
+The training data for the model is sourced from the Kaggle E-commerce Text dataset. This dataset contains product descriptions from various e-commerce categories.
+
+### Word to Vector Transformation
+
+To convert words into numerical vectors, the TF-IDF (Term Frequency-Inverse Document Frequency) vectorizer is employed. TF-IDF is a widely used technique in natural language processing that reflects the importance of words in a document relative to a collection of documents.
+
+The model is trained to categorize product descriptions into different classes, including Household, Books, Electronics, and Clothing & Accessories.
+
+
+
 
 ## Contributing
 
